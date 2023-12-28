@@ -1,0 +1,584 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DD6EAEE4-E5F4-41EC-8C08-9AD92733180B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PostOfficeManagementSystem2</RootNamespace>
+    <AssemblyName>PostOfficeManagementSystem2</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Home.Designer.cs">
+      <DependentUpon>Home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MoneyOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoneyOrder.Designer.cs">
+      <DependentUpon>MoneyOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="moneyorderDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>moneyorderDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="moneyorderDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>moneyorderDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="MoneySavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MoneySavings.Designer.cs">
+      <DependentUpon>MoneySavings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="moneysavingsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>moneysavingsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="moneysavingsDataSet11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>moneysavingsDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="moneysavingsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>moneysavingsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ParcelService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ParcelService.Designer.cs">
+      <DependentUpon>ParcelService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parcelserviceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>parcelserviceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductDetails.Designer.cs">
+      <DependentUpon>ProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="productdetailsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>productdetailsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="productdetailsDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>productdetailsDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="productdetailsDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>productdetailsDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="productdetailsDataSet3.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>productdetailsDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="productdetailsDataSet4.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>productdetailsDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="product_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="product_details.Designer.cs">
+      <DependentUpon>product_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RDIMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RDIMoney.Designer.cs">
+      <DependentUpon>RDIMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="rdimoneyDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rdimoneyDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rdimoneyDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rdimoneyDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="rdimoneyDataSet2.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>rdimoneyDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RegisteredPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RegisteredPost.Designer.cs">
+      <DependentUpon>RegisteredPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="registeredpostDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>registeredpostDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SalesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SalesDetails.Designer.cs">
+      <DependentUpon>SalesDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="salesdetailsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>salesdetailsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ShowRDIMoney.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ShowRDIMoney.Designer.cs">
+      <DependentUpon>ShowRDIMoney.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SpeedPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SpeedPost.Designer.cs">
+      <DependentUpon>SpeedPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="speedpostDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>speedpostDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMoneyOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMoneyOrder.Designer.cs">
+      <DependentUpon>ViewMoneyOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewMoneySavings.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewMoneySavings.Designer.cs">
+      <DependentUpon>ViewMoneySavings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewParcelService.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewParcelService.Designer.cs">
+      <DependentUpon>ViewParcelService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewProductDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewProductDetails.Designer.cs">
+      <DependentUpon>ViewProductDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewRegisteredPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewRegisteredPost.Designer.cs">
+      <DependentUpon>ViewRegisteredPost.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSalesDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSalesDetails.Designer.cs">
+      <DependentUpon>ViewSalesDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewSpeedPost.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewSpeedPost.Designer.cs">
+      <DependentUpon>ViewSpeedPost.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Home.resx">
+      <DependentUpon>Home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoneyOrder.resx">
+      <DependentUpon>MoneyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MoneySavings.resx">
+      <DependentUpon>MoneySavings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ParcelService.resx">
+      <DependentUpon>ParcelService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProductDetails.resx">
+      <DependentUpon>ProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="product_details.resx">
+      <DependentUpon>product_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="RDIMoney.resx">
+      <DependentUpon>RDIMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RegisteredPost.resx">
+      <DependentUpon>RegisteredPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SalesDetails.resx">
+      <DependentUpon>SalesDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ShowRDIMoney.resx">
+      <DependentUpon>ShowRDIMoney.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SpeedPost.resx">
+      <DependentUpon>SpeedPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMoneyOrder.resx">
+      <DependentUpon>ViewMoneyOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewMoneySavings.resx">
+      <DependentUpon>ViewMoneySavings.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewParcelService.resx">
+      <DependentUpon>ViewParcelService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewProductDetails.resx">
+      <DependentUpon>ViewProductDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewRegisteredPost.resx">
+      <DependentUpon>ViewRegisteredPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSalesDetails.resx">
+      <DependentUpon>ViewSalesDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewSpeedPost.resx">
+      <DependentUpon>ViewSpeedPost.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="moneyorderDataSet1.xsc">
+      <DependentUpon>moneyorderDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="moneyorderDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>moneyorderDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="moneyorderDataSet1.xss">
+      <DependentUpon>moneyorderDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="moneyorderDataSet11.xsc">
+      <DependentUpon>moneyorderDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="moneyorderDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>moneyorderDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="moneyorderDataSet11.xss">
+      <DependentUpon>moneyorderDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="moneysavingsDataSet1.xsc">
+      <DependentUpon>moneysavingsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="moneysavingsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>moneysavingsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="moneysavingsDataSet1.xss">
+      <DependentUpon>moneysavingsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="moneysavingsDataSet11.xsc">
+      <DependentUpon>moneysavingsDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="moneysavingsDataSet11.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>moneysavingsDataSet11.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="moneysavingsDataSet11.xss">
+      <DependentUpon>moneysavingsDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="moneysavingsDataSet2.xsc">
+      <DependentUpon>moneysavingsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="moneysavingsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>moneysavingsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="moneysavingsDataSet2.xss">
+      <DependentUpon>moneysavingsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="parcelserviceDataSet.xsc">
+      <DependentUpon>parcelserviceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="parcelserviceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>parcelserviceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="parcelserviceDataSet.xss">
+      <DependentUpon>parcelserviceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet.xsc">
+      <DependentUpon>productdetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>productdetailsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="productdetailsDataSet.xss">
+      <DependentUpon>productdetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet1.xsc">
+      <DependentUpon>productdetailsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>productdetailsDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="productdetailsDataSet1.xss">
+      <DependentUpon>productdetailsDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet2.xsc">
+      <DependentUpon>productdetailsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>productdetailsDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="productdetailsDataSet2.xss">
+      <DependentUpon>productdetailsDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet3.xsc">
+      <DependentUpon>productdetailsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>productdetailsDataSet3.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="productdetailsDataSet3.xss">
+      <DependentUpon>productdetailsDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet4.xsc">
+      <DependentUpon>productdetailsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="productdetailsDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>productdetailsDataSet4.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="productdetailsDataSet4.xss">
+      <DependentUpon>productdetailsDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="rdimoneyDataSet.xsc">
+      <DependentUpon>rdimoneyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rdimoneyDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rdimoneyDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rdimoneyDataSet.xss">
+      <DependentUpon>rdimoneyDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="rdimoneyDataSet2.xsc">
+      <DependentUpon>rdimoneyDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="rdimoneyDataSet2.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rdimoneyDataSet2.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rdimoneyDataSet2.xss">
+      <DependentUpon>rdimoneyDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="salesdetailsDataSet.xsc">
+      <DependentUpon>salesdetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="salesdetailsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>salesdetailsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="salesdetailsDataSet.xss">
+      <DependentUpon>salesdetailsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="speedpostDataSet.xsc">
+      <DependentUpon>speedpostDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="speedpostDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>speedpostDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="speedpostDataSet.xss">
+      <DependentUpon>speedpostDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="rdimoneyDataSet1.xsc">
+      <DependentUpon>rdimoneyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="rdimoneyDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>rdimoneyDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="rdimoneyDataSet1.xss">
+      <DependentUpon>rdimoneyDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="registeredpostDataSet.xsc">
+      <DependentUpon>registeredpostDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="registeredpostDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>registeredpostDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="registeredpostDataSet.xss">
+      <DependentUpon>registeredpostDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Resources\5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\8.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\14.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\18.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="moneyorder.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="moneysavings.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="parcelservice.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="productdetails.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="rdimoney.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="registeredpost.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="speedpost.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\21.jpeg" />
+    <None Include="Resources\22.png" />
+    <None Include="Resources\162.png" />
+    <None Include="Resources\23.jpeg" />
+    <Content Include="salesdetails.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\20.jpeg" />
+    <None Include="Resources\username.png" />
+    <None Include="Resources\161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
